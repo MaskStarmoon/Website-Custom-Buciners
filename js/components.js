@@ -1412,6 +1412,656 @@ EXPORT
 ====================================================
 */
 
+/*
+====================================================
+TOAST COMPONENT
+====================================================
+*/
+
+function toastComponent(){
+
+    return `
+
+<div
+class="toastComponent"
+id="toastComponent">
+
+<div
+class="toastIcon">
+
+✅
+
+</div>
+
+<div
+class="toastContent">
+
+<div
+class="toastTitle">
+
+Katabumb Creator
+
+</div>
+
+<div
+class="toastMessage">
+
+Berhasil
+
+</div>
+
+</div>
+
+</div>
+
+`;
+
+}
+
+/*
+====================================================
+EMPTY COMPONENT
+====================================================
+*/
+
+function emptyComponent(
+
+title="Belum Ada Data",
+
+description="Silahkan tambahkan data."
+
+){
+
+return`
+
+<div
+class="emptyComponent">
+
+<div
+class="emptyIcon">
+
+📂
+
+</div>
+
+<h3>
+
+${title}
+
+</h3>
+
+<p>
+
+${description}
+
+</p>
+
+</div>
+
+`;
+
+}
+
+/*
+====================================================
+PHONE PREVIEW
+====================================================
+*/
+
+function phonePreview(){
+
+return`
+
+<div
+class="previewPhone">
+
+<div
+class="previewNotch">
+
+</div>
+
+<div
+class="previewBody">
+
+<div
+id="previewHero">
+
+</div>
+
+<div
+id="previewGallery">
+
+</div>
+
+<div
+id="previewMessages">
+
+</div>
+
+<div
+id="previewGift">
+
+</div>
+
+<div
+id="previewButtons">
+
+</div>
+
+</div>
+
+</div>
+
+`;
+
+}
+
+/*
+====================================================
+CONFIRM DIALOG
+====================================================
+*/
+
+function confirmDialog(){
+
+return`
+
+<div
+class="confirmDialog"
+id="confirmDialog">
+
+<div
+class="confirmCard">
+
+<h2>
+
+Konfirmasi
+
+</h2>
+
+<p
+id="confirmText">
+
+Apakah kamu yakin?
+
+</p>
+
+<div
+class="confirmButtons">
+
+<button
+class="btn"
+id="confirmYes">
+
+Ya
+
+</button>
+
+<button
+class="btn"
+id="confirmNo">
+
+Batal
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+`;
+
+}
+
+/*
+====================================================
+UPLOAD COMPONENT
+====================================================
+*/
+
+function uploadComponent(
+
+id,
+
+accept="*"
+
+){
+
+return`
+
+<div
+class="uploadComponent">
+
+<input
+type="file"
+id="${id}"
+accept="${accept}">
+
+</div>
+
+`;
+
+}
+
+/*
+====================================================
+SECTION TITLE
+====================================================
+*/
+
+function sectionTitle(
+
+text
+
+){
+
+return`
+
+<div
+class="sectionTitle">
+
+${text}
+
+</div>
+
+`;
+
+}
+
+/*
+====================================================
+DIVIDER
+====================================================
+*/
+
+function divider(){
+
+return`
+
+<hr
+class="componentDivider">
+
+`;
+
+}
+
+/*
+====================================================
+BADGE
+====================================================
+*/
+
+function badge(
+
+text,
+
+color="primary"
+
+){
+
+return`
+
+<span
+class="badge badge-${color}">
+
+${text}
+
+</span>
+
+`;
+
+}
+
+/*
+====================================================
+PRESET CARD
+====================================================
+*/
+
+function presetCard(
+
+name,
+
+image,
+
+description
+
+){
+
+return`
+
+<div
+class="presetCard">
+
+<img
+src="${image}">
+
+<h3>
+
+${name}
+
+</h3>
+
+<p>
+
+${description}
+
+</p>
+
+<button
+class="btn usePreset">
+
+Gunakan
+
+</button>
+
+</div>
+
+`;
+
+}
+
+/*
+====================================================
+TEMPLATE CARD
+====================================================
+*/
+
+function templateCard(
+
+name,
+
+image,
+
+type
+
+){
+
+return`
+
+<div
+class="templateCard">
+
+<img
+src="${image}">
+
+<div
+class="templateInfo">
+
+<h3>
+
+${name}
+
+</h3>
+
+<p>
+
+${type}
+
+</p>
+
+</div>
+
+</div>
+
+`;
+
+}
+
+/*
+====================================================
+COLOR PICKER
+====================================================
+*/
+
+function colorPicker(
+
+id,
+
+value="#5B7CFA"
+
+){
+
+return`
+
+<input
+type="color"
+id="${id}"
+value="${value}">
+
+`;
+
+}
+
+/*
+====================================================
+ICON PICKER
+====================================================
+*/
+
+function iconPicker(
+
+id
+
+){
+
+return`
+
+<input
+type="text"
+id="${id}"
+placeholder="❤️">
+
+`;
+
+}
+
+/*
+====================================================
+EXPORT
+(SEMENTARA)
+====================================================
+*/
+
+/*
+====================================================
+PROJECT CARD
+====================================================
+*/
+
+function projectCard(project){
+
+    return `
+
+<div class="projectCard">
+
+    <div class="projectHeader">
+
+        <h3>${project.name}</h3>
+
+        <span>${project.template}</span>
+
+    </div>
+
+    <div class="projectBody">
+
+        <p>${project.description || ""}</p>
+
+    </div>
+
+</div>
+
+`;
+
+}
+
+/*
+====================================================
+RESULT CARD
+====================================================
+*/
+
+function resultCard(){
+
+    return `
+
+<div class="resultCard">
+
+    <label>
+
+        Kode Redeem
+
+    </label>
+
+    <input
+    id="resultRedeem"
+    readonly>
+
+    <label>
+
+        URL Website
+
+    </label>
+
+    <input
+    id="resultURL"
+    readonly>
+
+</div>
+
+`;
+
+}
+
+/*
+====================================================
+GENERATE PROGRESS
+====================================================
+*/
+
+function generateProgress(){
+
+return `
+
+<div class="generateProgress">
+
+<div class="progressBar">
+
+<div
+class="progressFill"
+id="generateProgressBar">
+
+</div>
+
+</div>
+
+<p
+id="generateProgressText">
+
+Preparing...
+
+</p>
+
+</div>
+
+`;
+
+}
+
+/*
+====================================================
+QR CODE
+====================================================
+*/
+
+function qrCodeComponent(){
+
+return `
+
+<div
+class="qrComponent">
+
+<div
+id="qrCode">
+
+</div>
+
+</div>
+
+`;
+
+}
+
+/*
+====================================================
+LINK CARD
+====================================================
+*/
+
+function linkCard(){
+
+return `
+
+<div
+class="linkCard">
+
+<input
+id="generatedLink"
+readonly>
+
+<button
+class="btn"
+id="copyGeneratedLink">
+
+Copy Link
+
+</button>
+
+</div>
+
+`;
+
+}
+
+/*
+====================================================
+REDEEM CARD
+====================================================
+*/
+
+function redeemCard(){
+
+return `
+
+<div
+class="redeemCard">
+
+<input
+id="generatedRedeem"
+readonly>
+
+<button
+class="btn"
+id="copyRedeemCode">
+
+Copy Redeem
+
+</button>
+
+</div>
+
+`;
+
+}
+
+/*
+====================================================
+FINAL EXPORT
+====================================================
+*/
+
 return{
 
 dashboard,
@@ -1448,4 +2098,44 @@ generate,
 
 loading,
 
-success
+success,
+
+toastComponent,
+
+emptyComponent,
+
+phonePreview,
+
+confirmDialog,
+
+uploadComponent,
+
+sectionTitle,
+
+divider,
+
+badge,
+
+presetCard,
+
+templateCard,
+
+colorPicker,
+
+iconPicker,
+
+projectCard,
+
+resultCard,
+
+generateProgress,
+
+qrCodeComponent,
+
+linkCard,
+
+redeemCard
+
+};
+
+})();
